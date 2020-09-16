@@ -1,32 +1,28 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <app-header></app-header>
+        <router-view/>
+        <app-footer></app-footer>
     </div>
-    <router-view />
-  </div>
 </template>
+<script>
+    import AppHeader from './components/Header'
+    import AppFooter from './components/Footer'
 
+    export default {
+        data() {
+            return {}
+        },
+        created() {
+
+        },
+        components: {
+            AppHeader,
+            AppFooter
+        }
+    }
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+    @import "https://fonts.googleapis.com/css?family=Titillium+Web:700|Source+Serif+Pro:400,700|Merriweather+Sans:400,700|Source+Sans+Pro:400,300,600,700,300italic,400italic,600italic,700italic";
+    @import "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
 </style>
